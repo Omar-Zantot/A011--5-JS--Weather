@@ -1,0 +1,253 @@
+/* start of general styling */
+:root {
+  --primaryColor: rgb(30, 32, 43);
+  --blueColor: rgb(0, 154, 216);
+  --lightGrey: rgb(50, 53, 68);
+  --darkGrey: rgb(38, 41, 54);
+  --grey: rgb(117, 117, 117);
+  --mutedColor: rgb(191, 193, 200);
+  --lightBg: rgb(45, 48, 61);
+  --darkBg: rgb(34, 37, 48);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* end of general styling */
+
+/* start of cmmon styling */
+.searchBtn,
+.form-control,
+.nav-link.active,
+.nav-link:not(.nav-link.active):hover,
+.menuIcon:hover {
+  border-radius: 25px;
+}
+
+.form-control,
+.form-control:focus,
+body {
+  background-color: var(--primaryColor);
+}
+
+.weatherLocation,
+.date,
+.day,
+.tomorrow,
+.copyRights {
+  color: var(--mutedColor);
+}
+/* end of cmmon styling */
+
+/* start of header sec */
+header {
+  padding: 40px 0;
+}
+
+.tagline {
+  font-size: 13px;
+  color: var(--mutedColor);
+}
+
+.menuIcon:hover {
+  color: var(--blueColor) !important;
+  border: 2px solid var(--blueColor);
+}
+.menuIcon {
+  border: 2px solid transparent;
+  transition: color 300ms;
+}
+.nav-link {
+  font-size: 15px;
+  padding: 2px 25px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar-collapse {
+  background-color: var(--darkGrey);
+}
+
+.navbar-nav li {
+  border-bottom-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.nav-link.active,
+.nav-link:not(.nav-link.active):hover {
+  color: var(--blueColor) !important;
+}
+
+.logo {
+  cursor: pointer;
+}
+/* start of media query of header sec */
+
+/* end of media query of header sec */
+@media screen and (min-width: 992px) {
+  .nav-link.active,
+  .nav-link:not(.nav-link.active):hover {
+    border: 2px solid var(--blueColor);
+  }
+  .nav-link {
+    border: 2px solid transparent;
+    transition: color 300ms;
+  }
+
+  .navbar-collapse {
+    background-color: transparent;
+  }
+  .navbar-nav li {
+    border: none !important;
+  }
+}
+/* end of header sec */
+
+/* start of main section */
+
+#searchSec {
+  background-image: url(../imgs/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+  min-height: 370px;
+}
+
+.form-control:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.form-control {
+  border: none;
+  padding: 17px 25px;
+}
+
+.form-control::placeholder {
+  color: var(--grey) !important;
+}
+
+.searchBtn,
+.searchBtn:hover {
+  background-color: var(--blueColor);
+}
+.searchBtn {
+  right: 7px;
+}
+
+.searchBtn:hover {
+  color: initial;
+}
+
+.weatherDeg {
+  font-size: calc(2rem + 1.5vw);
+}
+
+#day1Box,
+#futureForecast.child-2 {
+  background-color: var(--lightGrey);
+}
+
+.weatherDate {
+  background-color: var(--lightBg);
+}
+
+#futureForecast.child-1 .weatherDate {
+  background-color: var(--darkBg);
+}
+
+#weatherDesc,
+.tomDesc,
+.aftertomDesc {
+  color: var(--blueColor);
+}
+
+.weatherIndicator,
+.tomInfo,
+.aftertomInfo {
+  color: var(--mutedColor);
+}
+
+#futureForecast.child-1 {
+  background-color: var(--darkGrey);
+}
+
+#futureForecast.child-1 .weatherDate {
+  background-color: var(--darkBg);
+}
+
+.Weathers {
+  margin-top: -200px;
+}
+
+.tomDegree,
+.aftertomDegree {
+  font-size: calc(2.5rem + 0.7vw);
+}
+/* start of media query of main sec */
+@media screen and (min-width: 768px) {
+  .weatherIcon img {
+    width: 75% !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .day2Info,
+  .weatherInfo {
+    min-height: 300px;
+  }
+  .weatherIcons img {
+    width: 120% !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .day2Info,
+  .weatherInfo {
+    min-height: 310px;
+  }
+}
+/* end of media query of main sec */
+/* end of main section */
+
+/* start of footer */
+footer {
+  background-color: var(--darkGrey);
+  padding: 50px 0;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primaryColor);
+}
+
+.icon i {
+  color: var(--blueColor);
+  transition: color 500ms;
+}
+
+.icon {
+  cursor: pointer;
+  transition: background-color 500ms;
+}
+
+.icon:hover {
+  background-color: var(--blueColor);
+}
+
+.icon:hover > i {
+  color: white !important;
+}
+/* start of media query of footer */
+@media screen and (min-width: 992px) {
+  .emailSub {
+    width: calc(70% - 10px) !important;
+  }
+  .socialIcons {
+    width: calc(30% - 10px) !important;
+  }
+}
+/* end of media query of footer */
+
+/* end of footer */
